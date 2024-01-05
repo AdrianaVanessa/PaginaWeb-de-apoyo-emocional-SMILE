@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet');
+
+header {
+    background-color: #FAF5F1; 
+    color:  #545454; 
+    padding: 15px; 
+    border: none;
+    margin: 0;
+}
+
+body {
+    background-color: #FFEEE5; 
+    margin: 0;
+}
+
+H1 {
+    color: #545454;
+    font-size:30px;
+    font-family: 'Open Sans', sans-serif;
+}
+.imagen-derecha {
+    float: right; /* Alinea la imagen a la derecha */
+    margin-left: 20px; 
+    margin-top: 0px; /* Margen superior */
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.justify-center {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; 
+}
+
+
+.contenedor {
+    display: flex; /* Utilizar flexbox */
+    justify-content: center; 
+}
+
+
+.contenedor p {
+    width: 50%; /* Ancho del 50% para distribuir horizontalmente */
+    text-align: center; 
+    margin-right: 60px;
+}
+
+.contenedor-images{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.bloque {
+    text-align: center;
+    margin: 10px;
+    flex: 0 0 calc(20% - 20px); /* Ajuste del ancho para 5 elementos en una fila */
+}
+
+p {
+    text-align: center; 
+    color: #737373;
+    font-size:25px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.imagen {
+    max-width: 100px; /* Ancho máximo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-bottom: 10px; /* Espacio entre imágenes */
+}
+
+.texto-pequeño {
+    color: #737373;
+    text-align: right; 
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px; 
+    }
+}

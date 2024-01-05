@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet');
+
+H1 {
+    color: #545454;
+    font-size:50px;
+    font-family: 'Open Sans', sans-serif;
+}
+/* color de fondo de todas las pantallas */
+body {
+    background-color: #FFEEE5; 
+}
+/*  alinear el texto a la izquierda */
+.text-align-left {
+    text-align: center;
+    margin-top: 0px; /* Margen superior */
+}
+
+/* estilos para la imagen SMILE*/
+.imagen-derecha {
+    float: right; /* Alinea la imagen a la derecha */
+    margin-left: 20px; 
+    margin-top: 0px; /* Margen superior */
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.boton {
+    background-color: #E6836D; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón (arriba/abajo - izquierda/derecha) */
+    margin: 10px; /* Margen exterior del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    text-align: center; /* Alinea el texto al centro del botón */
+    text-decoration: none; /* Elimina el subrayado del texto del botón */
+    display: inline-block; /* Hace que el botón se comporte como un elemento en línea */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+}
+.justify-center {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; 
+}
+
+/* ------------------------ TERMINA INDEX----------------- */
