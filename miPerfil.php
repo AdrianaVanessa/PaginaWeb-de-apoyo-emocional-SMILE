@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Perfil</title>
     <link rel="icon" type="image/x-icon" href="images\SMILE.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -54,10 +54,10 @@ if (mysqli_num_rows($query) == 1) {
         <div class="collapse navbar-collapse bg-custom" id="menuLateral">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="home.php">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="miPerfil.php">Mi perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="miPerfil.php">Mi perfil</a>
+                    <a class="nav-link" href="home.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="chat.php">Chats</a>
@@ -84,93 +84,10 @@ if (mysqli_num_rows($query) == 1) {
 
 <div class="container-fluid custom-container">
     <div class="row h-100">
-        <!-- menu lateral -->
-        <div class="col-md-1 col-sm-4 bg-custom d-flex flex-column d-none d-lg-block">
-            <div class="d-flex flex-column align-items-center">
-
-            <div class="circle-icon2 mt-3 mb-3">
-                <i class="fas fa-bars mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-
-            <div class="circle-icon mt-3 mb-3">
-                <i class="fas fa-home mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-
-            <div class="circle-icon2 mt-3 mb-3">
-            <a href="chat.php">
-                <i class="fas fa-comment mb-2 mt-2 fa-2x color-white"></i>
-            </a>
-            </div>
-
-            <div class="circle-icon2 mt-3 mb-3">
-                <i class="fas fa-book-open mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-
-            <div class="circle-icon2 mt-3 mb-3">
-                <i class="fas fa-user-tie mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-
-            <div class="circle-icon2 mt-3 mb-3">
-                <i class="fas fa-puzzle-piece mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-
-            <div class="circle-icon2 mt-3 mb-3">
-                <i class="fas fa-microphone mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-
-            <div class="circle-icon2 mt-3 mb-3">
-                <i class="fas fa-user-plus mb-2 mt-2 fa-2x color-white"></i>
-            </div>
-            
-        </div>
-        </div>
-
-        <!-- pantalla principal -->
-        <div class="col-md-8 col-sm-12 bg-custom-principal d-flex flex-column">
-
-            <div class="mt-3 mb-3">
-                <h1><b>¡Bienvenido, <?php echo $userData['nombre']?> !</b></h1>
-            </div>
         
-            <div class="text-align-right">
-                <!-- empiezan imagenes -->
-                <img src="images/podcast_de_la_semana.png" alt="user image" class="imagen-izquierda2" style="cursor: pointer;">
-                <!-- pantallas grandes -->
-                <div class="imagenes-derecha mt-3 mb-3 d-none d-lg-block">
-                    <img src="images/telefono.png" style="width:100px; margin-bottom: 25px; cursor: pointer;" id="telefono-dialogo">
-                    <img src="images/ubicacion.png" style="width:100px; margin-bottom: 25px; cursor: pointer;" id="salud-mental-img">
-                    <img src="images/actividades.png" style="width:100px; margin-bottom: 25px; cursor: pointer;">
-                </div> 
-                <!-- pantallas chicas -->
-                <div class="mt-3 mb-3 d-lg-none" style="width: fit-content; margin: 0 auto;">
-                    <img src="images/telefono.png" style="width:100px; margin-bottom: 25px; cursor: pointer;" id="telefono-dialogo">
-                    <img src="images/ubicacion.png" style="width:100px; margin-bottom: 25px; cursor: pointer;" id="salud-mental-img">
-                    <img src="images/actividades.png" style="width:100px; margin-bottom: 25px; cursor: pointer;">
-                </div> 
-            </div>
-
-            <h1 class="texto-izquierda">Te podría interesar...</h1>
-
-            <!-- empieza la seccion sugerencias (imagenes) -->
-            <div class="contenedor-images">
-                <div class="bloque">
-                    <img src="images\sugerencia1.png" alt="sugerencia 1"class="imagen">
-                    <p class="texto-pequeño2">VIDEO: Psicología.</p>
-                </div>
-                <div class="bloque">
-                    <img src="images\sugerencia2.png" alt="sugerencia 2"class="imagen">
-                    <p class="texto-pequeño2">Podcast con María Z.</p>
-                </div>
-                <div class="bloque">
-                    <img src="images\sugerencia3.png" alt="sugerencia 3"class="imagen">
-                    <p class="texto-pequeño2">Blog: Manejar el estrés.</p>
-                </div>
-            </div>
-
-        </div>
 
         <!-- pantalla usuario -->
-        <div class="col-md-3 col-sm-12 bg-custom-user d-flex flex-column d-none d-lg-block">
+        <div class="col-md-3 col-sm-12 bg-custom-user d-flex flex-column">
 
             <div class="mt-3 mb-3">
                 <h1><b>Perfil del usuario</b></h1>
@@ -221,16 +138,6 @@ if (mysqli_num_rows($query) == 1) {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 <script>
-         // evento al sweet alert2
-        document.getElementById('telefono-dialogo').addEventListener('click', function() {
-            Swal.fire({
-                title: 'Números de emergencia en México',
-                html: 'Línea de emergencia general: <b>911</b><br>Si necesitas ayuda inmediata en crisis de salud mental, puedes llamar a la Línea de Atención a la Crisis en México al <b>800-273-8255</b>',
-                icon: 'info'
-                
-            });
-        });
-
         document.getElementById("logoutLink").addEventListener("click", function(e) {
         e.preventDefault();
         
@@ -251,25 +158,6 @@ if (mysqli_num_rows($query) == 1) {
 });
 </script>
 <script>
-// sweet alert2 para lugares de salud mental
-document.getElementById('salud-mental-img').addEventListener('click', function() {
-        Swal.fire({
-            title: 'Centros de Salud Mental',
-            text: 'Encuentra los centros de salud mental más cercanos',
-            icon: 'info',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ver Mapa'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = 'https://www.google.com/maps/search/Centros+de+Salud+Mental+Cercanos+CDMX';
-            }
-        });
-    });
-
-    // ++++++++++++++++++++++++++++++++++++++++++++++++ EDITAR USUARIO+++++++++++++++++++++++++++
-
     document.getElementById("editUserData").addEventListener("click", function() {
     Swal.fire({
         title: 'Editar información',

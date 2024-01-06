@@ -70,6 +70,7 @@
     </form>
 
     <?php
+    session_start();
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dbhost = "localhost";
         $dbuser = "root";
@@ -85,9 +86,13 @@
         $pass = $_POST["txtpassword"];
 
         $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE correo = '" . $email . "' and contraseña = '" . $pass . "'");
-        $nr = mysqli_num_rows($query);
+        $resultado = mysqli_num_rows($query);
 
-        if ($nr == 1) {
+        if ($resultado == 1) {
+            // iniciar sesion y guardar id del usuario en una variable de sesión
+            $row = mysqli_fetch_assoc($query);
+            $_SESSION['user_id'] = $row['id'];
+
             echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'></script>";
             echo "<script>
                     Swal.fire({
@@ -99,8 +104,10 @@
                     setTimeout(function(){
                         window.location.href = 'home.php'; 
                     }, 2000); // (2 seg)
-                 </script>";
-        } else if ($nr == 0) {
+            </script>";
+            exit();
+
+        } else if ($resultado == 0) {
             echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'></script>";
             echo "<script>
                     Swal.fire({
