@@ -178,7 +178,7 @@ if (mysqli_num_rows($query) == 1) {
 
             <div class="text-align-right mt-3 mb-3">
                 <!-- imagen antes del texto para float -->
-                <img src="images/user_image.jpeg" alt="user image" class="imagen-izquierda">
+                <img src="<?php echo $userData['foto_perfil']; ?>" alt="Imagen" id="imagen" style="cursor: pointer;" class="imagen-izquierda">
                 <h2> <?php echo $userData['nombre']. " " . $userData['apellido']; ?>
                 </h2>
                 <p class="texto-pequeño"><?php echo $userData['correo']; ?></p>
@@ -322,6 +322,21 @@ document.getElementById('salud-mental-img').addEventListener('click', function()
     });
 });
 
+
+// cambiar imagen
+
+document.getElementById('imagen').addEventListener('click', function() {
+        Swal.fire({
+            title: 'Subir Imagen',
+            html: `<form action="procesar_imagen.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="foto_perfil" id="inputImagen">
+                    <input type="submit" value="Subir Foto" name="submit">
+                    </form>`,
+            showCancelButton: true,
+            showConfirmButton: false,
+            cancelButtonText: 'Cerrar'
+        });
+    });
 </script>
 
 <style>
@@ -425,6 +440,8 @@ document.getElementById('salud-mental-img').addEventListener('click', function()
     font-size:17px;
     font-family: 'Open Sans', sans-serif;
 }
+
+
 </style>
 
 </body>
